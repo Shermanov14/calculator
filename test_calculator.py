@@ -8,4 +8,4 @@ def test_subtract ():
 def test_multiply():
     assert calculator.multiply(3, 3) == 9
 def test_divide():
-    assert calculator.divide(12, 3) == 4
+    assert calculator.divide(15, 3) == 5

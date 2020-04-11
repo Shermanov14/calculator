@@ -6,14 +6,14 @@ pipeline {
         stage("Setup scripts"){
             steps{
                 sh """
-                    yum install pytest
+                    sudo yum install pytest -y
                 """    
             } // steps
         } // stage
         stage("Run unit tests"){
             steps {
                 sh """
-                   python -m pytest
+                   sudo python -m pytest
                 """
             }//steps
         }//stage
@@ -21,7 +21,7 @@ pipeline {
     post {
         always {
            sh """
-              yum uninstall pytest -y
+              sudo yum uninstall pytest -y
             """            
         }//always
     }//post
